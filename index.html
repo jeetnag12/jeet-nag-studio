@@ -173,23 +173,23 @@
     </div>
     <div class="grid">
       <div class="card">
-        <video src="videos/stack-it-3-ways.mp4" muted loop playsinline autoplay preload="metadata"></video>
+        <video src="videos/stack-it-3-ways.mp4" muted loop playsinline autoplay preload="metadata" disablepictureinpicture controlslist="nodownload" oncontextmenu="return false;"></video>
         <div class="meta"><b>Stack it 3 ways</b><span>Silver jewellery · Meta ad</span></div>
       </div>
       <div class="card">
-        <video src="https://jeetnagportfolio.netlify.app/videos/meta-ad-sunglasses.mp4" muted loop playsinline autoplay preload="metadata"></video>
+        <video src="videos/meta-ad-sunglasses.mp4" muted loop playsinline autoplay preload="metadata" disablepictureinpicture controlslist="nodownload" oncontextmenu="return false;"></video>
         <div class="meta"><b>Sunglasses ad</b><span>Eyewear · Meta ad</span></div>
       </div>
       <div class="card">
-        <video src="https://jeetnagportfolio.netlify.app/videos/meta-ad-bunaai.mp4" muted loop playsinline autoplay preload="metadata"></video>
+        <video src="videos/meta-ad-bunaai.mp4" muted loop playsinline autoplay preload="metadata" disablepictureinpicture controlslist="nodownload" oncontextmenu="return false;"></video>
         <div class="meta"><b>Kurta set ad</b><span>Ethnic wear · Meta ad</span></div>
       </div>
       <div class="card">
-        <video src="https://jeetnagportfolio.netlify.app/videos/sneaker-haul.mp4" muted loop playsinline autoplay preload="metadata"></video>
+        <video src="videos/sneaker-haul.mp4" muted loop playsinline autoplay preload="metadata" disablepictureinpicture controlslist="nodownload" oncontextmenu="return false;"></video>
         <div class="meta"><b>Sneaker haul</b><span>Footwear · UGC reel</span></div>
       </div>
       <div class="card">
-        <video src="https://jeetnagportfolio.netlify.app/videos/saree-haul.mp4" muted loop playsinline autoplay preload="metadata"></video>
+        <video src="videos/saree-haul.mp4" muted loop playsinline autoplay preload="metadata" disablepictureinpicture controlslist="nodownload" oncontextmenu="return false;"></video>
         <div class="meta"><b>Saree try-on haul</b><span>Ethnic wear · numbered looks</span></div>
       </div>
     </div>
@@ -256,6 +256,6 @@
     <span>AI UGC ads · AI commercials · India, UAE, UK, US</span>
   </div>
 </footer>
-
+<script>document.addEventListener('contextmenu',function(e){if(e.target.tagName==='VIDEO')e.preventDefault();});</script>
 </body>
 </html>
