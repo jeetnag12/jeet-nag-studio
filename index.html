@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jeet Nag Studio · AI Ads for Fashion Brands</title>
+<meta name="description" content="AI UGC ads and AI commercials for fashion, jewellery and eyewear brands. Fresh scroll-stopping ads every week, no shoots.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0e0e0e;
+    --muted: #6b6b6b;
+    --line: #e7e7e7;
+    --soft: #f5f5f4;
+    --bg: #ffffff;
+    --accent: #0e0e0e;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--ink); font-family: Inter, system-ui, sans-serif; line-height: 1.55; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+
+  /* nav */
+  nav { position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,.88); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+  nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+  .logo { font-weight: 800; letter-spacing: -.02em; font-size: 18px; }
+  .logo span { color: var(--muted); font-weight: 500; }
+  .links { display: flex; gap: 28px; font-size: 14px; color: var(--muted); }
+  .links a:hover { color: var(--ink); }
+  .btn { display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--ink); border-radius: 999px; padding: 10px 20px; font-size: 14px; font-weight: 500; transition: .2s; white-space: nowrap; }
+  .btn:hover { background: var(--ink); color: #fff; }
+  .btn.solid { background: var(--ink); color: #fff; }
+  .btn.solid:hover { background: #333; }
+
+  /* hero */
+  .hero { padding: 96px 0 72px; }
+  .eyebrow { font-size: 13px; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); margin-bottom: 20px; }
+  h1 { font-size: clamp(44px, 8vw, 96px); line-height: .98; letter-spacing: -.045em; font-weight: 700; max-width: 14ch; }
+  h1 em { font-style: normal; color: var(--muted); }
+  .hero p.lead { font-size: clamp(17px, 2vw, 20px); color: #3a3a3a; max-width: 560px; margin: 28px 0 36px; }
+  .hero .cta { display: flex; gap: 12px; flex-wrap: wrap; }
+  .points { display: flex; gap: 32px; flex-wrap: wrap; margin-top: 56px; padding-top: 28px; border-top: 1px solid var(--line); }
+  .points div { font-size: 15px; }
+  .points b { display: block; font-size: 15px; font-weight: 600; }
+  .points span { color: var(--muted); font-size: 14px; }
+
+  section { padding: 88px 0; }
+  .sec-head { display: flex; justify-content: space-between; align-items: end; gap: 24px; margin-bottom: 40px; flex-wrap: wrap; }
+  h2 { font-size: clamp(32px, 4.5vw, 52px); letter-spacing: -.035em; line-height: 1.02; font-weight: 700; }
+  .sec-head p { color: var(--muted); max-width: 380px; font-size: 15px; }
+
+  /* work */
+  .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .card { background: var(--soft); border-radius: 18px; overflow: hidden; }
+  .card video { width: 100%; aspect-ratio: 9/16; object-fit: cover; display: block; background: #ddd; }
+  .card .meta { padding: 14px 16px 18px; }
+  .card .meta b { font-size: 15px; font-weight: 600; display: block; }
+  .card .meta span { font-size: 13px; color: var(--muted); }
+
+  /* formats */
+  .formats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .fmt { border: 1px solid var(--line); border-radius: 18px; padding: 28px; }
+  .fmt .n { font-size: 13px; color: var(--muted); margin-bottom: 36px; }
+  .fmt h3 { font-size: 20px; letter-spacing: -.02em; margin-bottom: 8px; }
+  .fmt p { color: var(--muted); font-size: 15px; }
+
+  /* process */
+  .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border-top: 1px solid var(--ink); }
+  .step { padding: 24px 24px 0 0; }
+  .step .n { font-size: 13px; color: var(--muted); }
+  .step h3 { font-size: 18px; margin: 10px 0 6px; letter-spacing: -.01em; }
+  .step p { color: var(--muted); font-size: 15px; }
+
+  /* pricing */
+  .cur { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; padding: 4px; gap: 4px; }
+  .cur button { border: 0; background: none; font: inherit; font-size: 13px; font-weight: 500; padding: 7px 14px; border-radius: 999px; cursor: pointer; color: var(--muted); }
+  .cur button.on { background: var(--ink); color: #fff; }
+  .plans { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .plan { border: 1px solid var(--line); border-radius: 20px; padding: 30px; display: flex; flex-direction: column; }
+  .plan.pop { border-color: var(--ink); box-shadow: 0 1px 0 var(--ink); }
+  .tag { display: inline-block; font-size: 12px; font-weight: 600; background: var(--ink); color: #fff; padding: 4px 10px; border-radius: 999px; margin-bottom: 14px; align-self: flex-start; }
+  .plan h3 { font-size: 20px; letter-spacing: -.02em; }
+  .plan .for { color: var(--muted); font-size: 14px; margin-top: 4px; }
+  .price { font-size: 40px; font-weight: 700; letter-spacing: -.035em; margin: 22px 0 4px; }
+  .price small { font-size: 15px; font-weight: 500; color: var(--muted); letter-spacing: 0; }
+  .plan ul { list-style: none; margin: 18px 0 26px; flex: 1; }
+  .plan li { font-size: 15px; padding: 8px 0; border-top: 1px solid var(--line); }
+  .plan .btn { justify-content: center; }
+  .extras { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 16px; }
+  .extra { background: var(--soft); border-radius: 16px; padding: 22px 24px; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+  .extra b { font-weight: 600; font-size: 15px; display: block; }
+  .extra span { color: var(--muted); font-size: 13px; }
+  .extra .p { font-weight: 700; font-size: 18px; white-space: nowrap; }
+  .note { color: var(--muted); font-size: 13px; margin-top: 18px; }
+
+  /* faq */
+  .faq { max-width: 760px; }
+  details { border-top: 1px solid var(--line); padding: 20px 0; }
+  details:last-child { border-bottom: 1px solid var(--line); }
+  summary { cursor: pointer; font-weight: 600; font-size: 17px; list-style: none; display: flex; justify-content: space-between; gap: 16px; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "+"; font-weight: 400; color: var(--muted); font-size: 22px; line-height: 1; }
+  details[open] summary::after { content: "–"; }
+  details p { color: var(--muted); margin-top: 10px; font-size: 15px; }
+
+  /* contact */
+  .contact { background: var(--ink); color: #fff; border-radius: 28px; padding: 72px 48px; text-align: center; margin-bottom: 64px; }
+  .contact h2 { margin: 0 auto 16px; max-width: 16ch; }
+  .contact p { color: #b5b5b5; max-width: 480px; margin: 0 auto 32px; }
+  .contact .cta { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .contact .btn { border-color: #fff; color: #fff; }
+  .contact .btn:hover { background: #fff; color: var(--ink); }
+  .contact .btn.solid { background: #fff; color: var(--ink); }
+  footer { border-top: 1px solid var(--line); padding: 28px 0 40px; font-size: 13px; color: var(--muted); }
+  footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+
+  @media (max-width: 900px) {
+    .grid { grid-template-columns: repeat(2, 1fr); }
+    .formats, .plans, .extras { grid-template-columns: 1fr; }
+    .steps { grid-template-columns: 1fr 1fr; row-gap: 28px; }
+    .links { display: none; }
+  }
+  @media (max-width: 520px) {
+    .wrap { padding: 0 16px; }
+    .hero { padding: 64px 0 48px; }
+    section { padding: 64px 0; }
+    .grid { gap: 10px; }
+    .steps { grid-template-columns: 1fr; }
+    .contact { padding: 52px 22px; border-radius: 22px; }
+    nav .btn { padding: 8px 14px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="#" class="logo">Jeet Nag <span>Studio</span></a>
+    <div class="links">
+      <a href="#work">Work</a>
+      <a href="#how">How it works</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <a class="btn solid" href="https://wa.me/917980812451?text=Hi%20Jeet%2C%20I%27d%20like%20a%20free%20sample%20ad" target="_blank" rel="noopener">Get a free sample</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">AI ads for fashion, jewellery &amp; eyewear brands</p>
+    <h1>Fresh ads every week. <em>No shoots.</em></h1>
+    <p class="lead">We turn your product photos into scroll-stopping UGC reels and lifestyle commercials, made with AI, ready for Meta and Instagram.</p>
+    <div class="cta">
+      <a class="btn solid" href="https://wa.me/917980812451?text=Hi%20Jeet%2C%20I%27d%20like%20a%20free%20sample%20ad" target="_blank" rel="noopener">Get a free sample ad →</a>
+      <a class="btn" href="#work">See the work</a>
+    </div>
+    <div class="points">
+      <div><b>No models, no studio</b><span>Just send product photos</span></div>
+      <div><b>Built for Meta ads</b><span>Vertical, hook-first, ready to run</span></div>
+      <div><b>First sample is free</b><span>See it before you pay anything</span></div>
+    </div>
+  </div>
+</header>
+
+<section id="work" style="padding-top:24px">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Recent work</h2>
+      <p>Try-on reels, hauls and product ads, every frame made with AI.</p>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <video src="https://jeetnagportfolio.netlify.app/videos/saree-haul.mp4" muted loop playsinline autoplay preload="metadata"></video>
+        <div class="meta"><b>Saree try-on haul</b><span>Ethnic wear · numbered looks</span></div>
+      </div>
+      <div class="card">
+        <video src="https://jeetnagportfolio.netlify.app/videos/meta-ad-sunglasses.mp4" muted loop playsinline autoplay preload="metadata"></video>
+        <div class="meta"><b>Sunglasses ad</b><span>Eyewear · Meta ad</span></div>
+      </div>
+      <div class="card">
+        <video src="https://jeetnagportfolio.netlify.app/videos/meta-ad-bunaai.mp4" muted loop playsinline autoplay preload="metadata"></video>
+        <div class="meta"><b>Kurta set ad</b><span>Ethnic wear · Meta ad</span></div>
+      </div>
+      <div class="card">
+        <video src="https://jeetnagportfolio.netlify.app/videos/sneaker-haul.mp4" muted loop playsinline autoplay preload="metadata"></video>
+        <div class="meta"><b>Sneaker haul</b><span>Footwear · UGC reel</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:24px">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>What we make</h2>
+      <p>Three formats that work for fashion brands on Meta.</p>
+    </div>
+    <div class="formats">
+      <div class="fmt"><div class="n">01</div><h3>AI UGC ads</h3><p>Creator-style try-ons, hauls and reviews. Look 1, 2, 3 reels that feel native to the feed.</p></div>
+      <div class="fmt"><div class="n">02</div><h3>AI lifestyle commercials</h3><p>Cinematic brand films for launches, festive and wedding season, without a production crew.</p></div>
+      <div class="fmt"><div class="n">03</div><h3>Hook variations</h3><p>One video, many openings. Test more creatives every week and keep your ads from going stale.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="how" style="padding-top:24px">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>How it works</h2>
+      <p>Simple, and you see results before you pay.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="n">Step 1</div><h3>Send your product</h3><p>Share product photos or links and tell us who you sell to.</p></div>
+      <div class="step"><div class="n">Step 2</div><h3>Get a free sample</h3><p>We make one short ad with your product so you can judge the quality.</p></div>
+      <div class="step"><div class="n">Step 3</div><h3>Pick a pack</h3><p>Like it? Choose a pack and we plan the hooks and looks with you.</p></div>
+      <div class="step"><div class="n">Step 4</div><h3>Run and refresh</h3><p>Ready-to-run files for Meta, with a round of revisions included.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="pricing" style="padding-top:24px">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Pricing</h2>
+      <div class="cur" role="tablist" aria-label="Currency">
+        <button class="on" data-c="inr">₹ INR</button>
+        <button data-c="aed">AED</button>
+        <button data-c="usd">$ USD</button>
+      </div>
+    </div>
+    <div class="plans">
+      <div class="plan">
+        <h3>Starter</h3>
+        <div class="for">Try AI ads on your brand</div>
+        <div class="price" data-inr="₹12,999" data-aed="AED 1,649" data-usd="$449">₹12,999</div>
+        <ul>
+          <li>3 AI UGC ads, each with a different hook</li>
+          <li>Script and hook writing included</li>
+          <li>AI creator-style talent, voiceover and captions</li>
+          <li>1 revision per ad</li>
+        </ul>
+        <a class="btn" href="https://wa.me/917980812451?text=Hi%20Jeet%2C%20I%27m%20interested%20in%20the%20Starter%20pack" target="_blank" rel="noopener">Choose Starter</a>
+      </div>
+      <div class="plan pop">
+        <span class="tag">Most popular</span>
+        <h3>Growth</h3>
+        <div class="for">For brands running ads every month</div>
+        <div class="price" data-inr="₹21,999" data-aed="AED 2,749" data-usd="$749">₹21,999</div>
+        <ul>
+          <li>5 AI UGC ads + 5 extra hook variations (10 creatives)</li>
+          <li>Angles: haul, try-on, routine, review, unboxing</li>
+          <li>Square 1:1 cuts included</li>
+          <li>2 revisions per ad</li>
+        </ul>
+        <a class="btn solid" href="https://wa.me/917980812451?text=Hi%20Jeet%2C%20I%27m%20interested%20in%20the%20Growth%20pack" target="_blank" rel="noopener">Choose Growth</a>
+      </div>
+      <div class="plan">
+        <h3>Creative Partner</h3>
+        <div class="for">Your monthly ad creative team</div>
+        <div class="price" data-inr="₹37,999<small> /month</small>" data-aed="AED 5,499<small> /month</small>" data-usd="$1,499<small> /month</small>">₹37,999<small> /month</small></div>
+        <ul>
+          <li>10 AI UGC ads every month, in weekly batches</li>
+          <li>Monthly hook refresh based on what's winning</li>
+          <li>1 AI lifestyle reel for organic content</li>
+          <li>Priority slot and direct WhatsApp support</li>
+        </ul>
+        <a class="btn" href="https://wa.me/917980812451?text=Hi%20Jeet%2C%20I%27m%20interested%20in%20the%20Creative%20Partner%20plan" target="_blank" rel="noopener">Talk to us</a>
+      </div>
+    </div>
+    <div class="extras">
+      <div class="extra"><div><b>Single ad</b><span>Test one product first</span></div><div class="p" data-inr="₹4,999" data-aed="AED 649" data-usd="$179">₹4,999</div></div>
+      <div class="extra"><div><b>AI commercial</b><span>Cinematic brand film</span></div><div class="p" data-inr="from ₹29,999" data-aed="from AED 3,699" data-usd="from $999">from ₹29,999</div></div>
+      <div class="extra"><div><b>Agencies</b><span>White-label, your brand</span></div><div class="p" data-inr="from ₹3,499/ad" data-aed="from AED 549/ad" data-usd="from $149/ad">from ₹3,499/ad</div></div>
+    </div>
+    <p class="note">Timelines are agreed per project. Prices exclude taxes and ad spend.</p>
+  </div>
+</section>
+
+<section id="faq" style="padding-top:24px">
+  <div class="wrap">
+    <div class="sec-head"><h2>Questions</h2></div>
+    <div class="faq">
+      <details><summary>Do you need my product shipped to you?</summary><p>No. Clear product photos from your website or catalogue are enough. More angles give better results.</p></details>
+      <details><summary>Will it look fake?</summary><p>That's why the first sample is free. We make it with your actual product, and if it doesn't look right for your brand, you don't pay anything.</p></details>
+      <details><summary>Can I run these as Meta ads?</summary><p>Yes. Every video is made vertical and hook-first for Reels, Stories and feed ads, and you get the final files to use as you like.</p></details>
+      <details><summary>How fast do I get the ads?</summary><p>It depends on the number of ads and looks. We agree on a timeline before we start.</p></details>
+      <details><summary>Do you work with agencies?</summary><p>Yes. We work white-label for agencies, so the ads go out under your name.</p></details>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="contact">
+    <h2>Want to see your product in an ad?</h2>
+    <p>Send us one product. We'll make you a free sample ad. No strings attached.</p>
+    <div class="cta">
+      <a class="btn solid" href="https://wa.me/917980812451?text=Hi%20Jeet%2C%20I%27d%20like%20a%20free%20sample%20ad" target="_blank" rel="noopener">WhatsApp us</a>
+      <a class="btn" href="mailto:jeetnag2003@gmail.com?subject=Free%20sample%20ad">jeetnag2003@gmail.com</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Jeet Nag Studio · Bangalore, India</span>
+    <span>AI UGC ads · AI commercials · India, UAE, UK, US</span>
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll('.cur button').forEach(function (b) {
+    b.addEventListener('click', function () {
+      document.querySelectorAll('.cur button').forEach(function (x) { x.classList.remove('on'); });
+      b.classList.add('on');
+      var c = b.dataset.c;
+      document.querySelectorAll('[data-' + c + ']').forEach(function (el) { el.innerHTML = el.dataset[c]; });
+    });
+  });
+</script>
+</body>
+</html>
