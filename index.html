@@ -53,7 +53,7 @@
   .sec-head p { color: var(--muted); max-width: 380px; font-size: 15px; }
 
   /* work */
-  .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; }
   .card { background: var(--soft); border-radius: 18px; overflow: hidden; }
   .card video { width: 100%; aspect-ratio: 9/16; object-fit: cover; display: block; background: #ddd; }
   .card .meta { padding: 14px 16px 18px; }
@@ -142,7 +142,6 @@
     <div class="links">
       <a href="#work">Work</a>
       <a href="#how">How it works</a>
-      <a href="#pricing">Pricing</a>
       <a href="#faq">FAQ</a>
     </div>
     <a class="btn solid" href="https://wa.me/917980812451?text=Hi%20Jeet%2C%20I%27d%20like%20a%20free%20sample%20ad" target="_blank" rel="noopener">Get a free sample</a>
@@ -173,6 +172,10 @@
       <p>Try-on reels, hauls and product ads, every frame made with AI.</p>
     </div>
     <div class="grid">
+      <div class="card">
+        <video src="videos/stack-it-3-ways.mp4" muted loop playsinline autoplay preload="metadata"></video>
+        <div class="meta"><b>Stack it 3 ways</b><span>Silver jewellery · Meta ad</span></div>
+      </div>
       <div class="card">
         <video src="https://jeetnagportfolio.netlify.app/videos/saree-haul.mp4" muted loop playsinline autoplay preload="metadata"></video>
         <div class="meta"><b>Saree try-on haul</b><span>Ethnic wear · numbered looks</span></div>
@@ -222,64 +225,6 @@
   </div>
 </section>
 
-<section id="pricing" style="padding-top:24px">
-  <div class="wrap">
-    <div class="sec-head">
-      <h2>Pricing</h2>
-      <div class="cur" role="tablist" aria-label="Currency">
-        <button class="on" data-c="inr">₹ INR</button>
-        <button data-c="aed">AED</button>
-        <button data-c="usd">$ USD</button>
-      </div>
-    </div>
-    <div class="plans">
-      <div class="plan">
-        <h3>Starter</h3>
-        <div class="for">Try AI ads on your brand</div>
-        <div class="price" data-inr="₹12,999" data-aed="AED 1,649" data-usd="$449">₹12,999</div>
-        <ul>
-          <li>3 AI UGC ads, each with a different hook</li>
-          <li>Script and hook writing included</li>
-          <li>AI creator-style talent, voiceover and captions</li>
-          <li>1 revision per ad</li>
-        </ul>
-        <a class="btn" href="https://wa.me/917980812451?text=Hi%20Jeet%2C%20I%27m%20interested%20in%20the%20Starter%20pack" target="_blank" rel="noopener">Choose Starter</a>
-      </div>
-      <div class="plan pop">
-        <span class="tag">Most popular</span>
-        <h3>Growth</h3>
-        <div class="for">For brands running ads every month</div>
-        <div class="price" data-inr="₹21,999" data-aed="AED 2,749" data-usd="$749">₹21,999</div>
-        <ul>
-          <li>5 AI UGC ads + 5 extra hook variations (10 creatives)</li>
-          <li>Angles: haul, try-on, routine, review, unboxing</li>
-          <li>Square 1:1 cuts included</li>
-          <li>2 revisions per ad</li>
-        </ul>
-        <a class="btn solid" href="https://wa.me/917980812451?text=Hi%20Jeet%2C%20I%27m%20interested%20in%20the%20Growth%20pack" target="_blank" rel="noopener">Choose Growth</a>
-      </div>
-      <div class="plan">
-        <h3>Creative Partner</h3>
-        <div class="for">Your monthly ad creative team</div>
-        <div class="price" data-inr="₹37,999<small> /month</small>" data-aed="AED 5,499<small> /month</small>" data-usd="$1,499<small> /month</small>">₹37,999<small> /month</small></div>
-        <ul>
-          <li>10 AI UGC ads every month, in weekly batches</li>
-          <li>Monthly hook refresh based on what's winning</li>
-          <li>1 AI lifestyle reel for organic content</li>
-          <li>Priority slot and direct WhatsApp support</li>
-        </ul>
-        <a class="btn" href="https://wa.me/917980812451?text=Hi%20Jeet%2C%20I%27m%20interested%20in%20the%20Creative%20Partner%20plan" target="_blank" rel="noopener">Talk to us</a>
-      </div>
-    </div>
-    <div class="extras">
-      <div class="extra"><div><b>Single ad</b><span>Test one product first</span></div><div class="p" data-inr="₹4,999" data-aed="AED 649" data-usd="$179">₹4,999</div></div>
-      <div class="extra"><div><b>AI commercial</b><span>Cinematic brand film</span></div><div class="p" data-inr="from ₹29,999" data-aed="from AED 3,699" data-usd="from $999">from ₹29,999</div></div>
-      <div class="extra"><div><b>Agencies</b><span>White-label, your brand</span></div><div class="p" data-inr="from ₹3,499/ad" data-aed="from AED 549/ad" data-usd="from $149/ad">from ₹3,499/ad</div></div>
-    </div>
-    <p class="note">Timelines are agreed per project. Prices exclude taxes and ad spend.</p>
-  </div>
-</section>
-
 <section id="faq" style="padding-top:24px">
   <div class="wrap">
     <div class="sec-head"><h2>Questions</h2></div>
@@ -287,6 +232,7 @@
       <details><summary>Do you need my product shipped to you?</summary><p>No. Clear product photos from your website or catalogue are enough. More angles give better results.</p></details>
       <details><summary>Will it look fake?</summary><p>That's why the first sample is free. We make it with your actual product, and if it doesn't look right for your brand, you don't pay anything.</p></details>
       <details><summary>Can I run these as Meta ads?</summary><p>Yes. Every video is made vertical and hook-first for Reels, Stories and feed ads, and you get the final files to use as you like.</p></details>
+      <details><summary>How much does it cost?</summary><p>It depends on how many ads you need each month. Message us and we'll send you our packages.</p></details>
       <details><summary>How fast do I get the ads?</summary><p>It depends on the number of ads and looks. We agree on a timeline before we start.</p></details>
       <details><summary>Do you work with agencies?</summary><p>Yes. We work white-label for agencies, so the ads go out under your name.</p></details>
     </div>
@@ -311,15 +257,5 @@
   </div>
 </footer>
 
-<script>
-  document.querySelectorAll('.cur button').forEach(function (b) {
-    b.addEventListener('click', function () {
-      document.querySelectorAll('.cur button').forEach(function (x) { x.classList.remove('on'); });
-      b.classList.add('on');
-      var c = b.dataset.c;
-      document.querySelectorAll('[data-' + c + ']').forEach(function (el) { el.innerHTML = el.dataset[c]; });
-    });
-  });
-</script>
 </body>
 </html>
